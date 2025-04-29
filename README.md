@@ -18,8 +18,8 @@ This project provides a complete workflow for generating descriptive captions fo
 
 ### 1. Clone the Repository
 
-git clone https://github.com/sanbancan/image-captioning-attention.git
-cd image-captioning-attention
+git clone https://github.com/sanbancan/CS163-Senior-Data-Science-Project.git
+cd CS163-Senior-Data-Science-Project
 
 
 ### 2. Create and Activate a Python Environment
