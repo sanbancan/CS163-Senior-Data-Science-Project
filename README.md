@@ -8,13 +8,13 @@ Website: [Project Demo & Documentation](https://dsprojectwebsite.el.r.appspot.co
 
 ---
 
-## 🚀 Summary
+## Summary
 
 This project provides a complete workflow for generating descriptive captions for images using deep learning. It covers data preprocessing, model training, evaluation, and visualization of attention maps, enabling both research and practical applications in computer vision and natural language processing.
 
 ---
 
-## 🛠️ Setup Instructions
+## Setup Instructions
 
 ### 1. Clone the Repository
 
@@ -49,7 +49,7 @@ pip install -r requirements.txt
 
 ---
 
-## 📊 Pipeline Overview
+## Pipeline Overview
 
 The project pipeline consists of the following stages:
 
@@ -73,7 +73,7 @@ The project pipeline consists of the following stages:
 
 ---
 
-## 🗂️ Repository Structure
+## Repository Structure
 
 | Directory / File         | Purpose                                                                                      |
 |------------------------- |---------------------------------------------------------------------------------------------|
@@ -87,11 +87,10 @@ The project pipeline consists of the following stages:
 | `README.md`              | Project documentation and setup instructions (this file).                                   |
 | `data/`                  | Directory for processed data files (HDF5/JSON) and word maps.                              |
 | `checkpoints/`           | Directory to store model checkpoints during training.                                       |
-| `website/`               | (Optional) Code and assets for the project demo website.                                   |
 
 ---
 
-## 🔑 Key Processing Code Locations
+## Key Processing Code Locations
 
 - **Data Preparation:** [`create_input_files.py`](create_input_files.py)
 - **Model Definition:** [`models.py`](models.py)
@@ -99,11 +98,11 @@ The project pipeline consists of the following stages:
 - **Utilities:** [`utils.py`](utils.py)
 - **Inference & Visualization:** [`caption.py`](caption.py)
 - **Dataset Loader:** [`datasets.py`](datasets.py)
-- **Website Publication:** [`website/`](website/) (if applicable)
+
 
 ---
 
-## 📚 References
+## References
 
 - [Show, Attend and Tell: Neural Image Caption Generation with Visual Attention (Xu et al., 2015)](https://arxiv.org/abs/1502.03044)
 - [COCO Dataset](https://cocodataset.org/)
