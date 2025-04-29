@@ -105,7 +105,7 @@ The project pipeline consists of the following stages:
 ## References
 
 - [Show, Attend and Tell: Neural Image Caption Generation with Visual Attention (Xu et al., 2015)](https://arxiv.org/abs/1502.03044)
-- [COCO Dataset](https://cocodataset.org/)
+- [COCO 2017 Dataset](https://cocodataset.org/#download)
 
 ---
 
