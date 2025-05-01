@@ -8,6 +8,8 @@ Website: [Project Demo & Documentation](https://dsprojectwebsite.el.r.appspot.co
 
 ---
 
+
+
 ## Summary
 
 This project provides a complete workflow for generating descriptive captions for images using deep learning. It covers data preprocessing, model training, evaluation, and visualization of attention maps, enabling both research and practical applications in computer vision and natural language processing.
