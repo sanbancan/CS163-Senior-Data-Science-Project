@@ -17,6 +17,62 @@ SAMPLES
 ![image](https://github.com/user-attachments/assets/09922a56-091a-4859-ac9d-5d883c67922d)
 ![image](https://github.com/user-attachments/assets/af036e27-f580-4ad0-b30c-ed2a7740c55a)
 
+smooth_fn = SmoothingFunction().method1
+
+# Build dicts for COCOEvalCap
+gts = {}   # idx -> list of GT strings
+res = {}   # idx -> [pred string]
+best_bleus = []
+
+for idx, img_id in enumerate(selected):
+    # 1) gather refs & hyp
+    ann_ids = coco.getAnnIds(imgIds=img_id)
+    anns    = coco.loadAnns(ann_ids)
+    refs    = [ann['caption'] for ann in anns]
+    hyp_words = batch[idx][1]
+    hyp_str   = ' '.join(hyp_words)
+
+    # 2) fill for evaluators
+    gts[idx] = refs
+    res[idx] = [hyp_str]
+
+    # 3) best-BLEU among all references
+    per_ref = [
+        sentence_bleu([r.split()], hyp_str.split(), smoothing_function=smooth_fn)
+        for r in refs
+    ]
+    best_bleus.append(max(per_ref))
+
+# 4) compute CIDEr & SPICE
+cider_scorer = Cider()
+spice_scorer = Spice()
+
+_, cider_scores = cider_scorer.compute_score(gts, res)
+
+
+# 5) display each image + captions + metrics
+for idx, img_id in enumerate(selected):
+    pil_img, pred_words = batch[idx]
+    refs    = gts[idx]
+    hyp_str = res[idx][0]
+    bleu    = best_bleus[idx]
+    cider   = cider_scores[idx]
+    
+
+    fig, ax = plt.subplots(figsize=(6, 6))
+    ax.imshow(pil_img)
+    ax.axis('off')
+
+    # Multi‐line title: generated, GTs, then metrics
+    gt_display = ' | '.join(refs[:3])
+    title = (
+        f"Generated: {hyp_str}\n"
+        f"GTs: {gt_display}\n"
+        f"BLEU: {bleu:.4f}   CIDEr: {cider:.4f}"
+    )
+    ax.set_title(title, wrap=True, fontsize=10)
+    plt.tight_layout()
+    plt.show()
 
 
 
