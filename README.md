@@ -13,6 +13,12 @@ SAMPLES
 ![image](https://github.com/user-attachments/assets/9f199180-6601-4c28-ae67-d35867d003de)
 ![image](https://github.com/user-attachments/assets/42aca738-1bb0-4d99-a641-d252983135c7)
 ![image](https://github.com/user-attachments/assets/52063acd-9d79-4489-9d5e-858ba1e17997)
+![image](https://github.com/user-attachments/assets/5f848e7e-f699-4300-bcab-8fcfed709226)
+![image](https://github.com/user-attachments/assets/09922a56-091a-4859-ac9d-5d883c67922d)
+![image](https://github.com/user-attachments/assets/af036e27-f580-4ad0-b30c-ed2a7740c55a)
+
+
+
 
 
 
