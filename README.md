@@ -55,7 +55,7 @@ pip install -r requirements.txt
 
 ### 4. Download Datasets
 
-- Download the COCO dataset (or Flickr8k/Flickr30k) as described in the [data section](#data).
+- Download the COCO dataset (or Flickr8k/Flickr30k).
 - Place images and annotation files in the appropriate directories as referenced in the code.
 
 ---
